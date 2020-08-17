@@ -6,8 +6,10 @@ import random
 
 
 def main():
-    score = float(input("Enter score: "))
-    print(result(score))
+    number_of_scores = int(input("Enter number on scores: "))
+    for i in range(1, number_of_scores + 1):
+        random_score = (random.randint(1, 100))
+        print("{} is {}".format(random_score, result(random_score)))
 
 
 def result(score):
@@ -19,10 +21,6 @@ def result(score):
         return "Passable"
     else:
         return "Bad"
-
-
-random_score = (random.randint(1, 100))
-print(result(random_score))
 
 
 main()
