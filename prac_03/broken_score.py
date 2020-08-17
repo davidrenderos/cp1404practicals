@@ -2,6 +2,7 @@
 CP1404/CP5632 - Practical
 Complete program to determine score status
 """
+import random
 
 
 def main():
@@ -18,6 +19,10 @@ def result(score):
         return "Passable"
     else:
         return "Bad"
+
+
+random_score = (random.randint(1, 100))
+print(result(random_score))
 
 
 main()
