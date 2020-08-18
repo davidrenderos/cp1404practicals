@@ -33,4 +33,5 @@ def get_data():
     input_file.close()
     return data
 
+
 main()
