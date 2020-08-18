@@ -10,8 +10,11 @@ def main():
     for i in range(number_of_quick_picks):
         list_of_numbers = []
         for j in range(NUMBERS_PER_LINE):
-            number = (random.randint(MINIMUM, MAXIMUM))
+            number = random.randint(MINIMUM, MAXIMUM)
+            while number in list_of_numbers:
+                number = random.randint(MINIMUM, MAXIMUM)
             list_of_numbers.append(number)
+        list_of_numbers.sort()
         print(list_of_numbers)
 
 
