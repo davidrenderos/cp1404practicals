@@ -8,14 +8,14 @@ MAXIMUM = 45
 def main():
     number_of_quick_picks = int(input("How many quick picks? "))
     for i in range(number_of_quick_picks):
-        list_of_numbers = []
+        quick_picks = []
         for j in range(NUMBERS_PER_LINE):
             number = random.randint(MINIMUM, MAXIMUM)
-            while number in list_of_numbers:
+            while number in quick_picks:
                 number = random.randint(MINIMUM, MAXIMUM)
-            list_of_numbers.append(number)
-        list_of_numbers.sort()
-        print(list_of_numbers)
+            quick_picks.append(number)
+        quick_picks.sort()
+        print(" ".join("{:2}".format(number) for number in quick_picks))
 
 
 main()
