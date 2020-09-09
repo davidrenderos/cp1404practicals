@@ -11,8 +11,8 @@ def main():
 
 
 def get_name(email):
-    name = email
-    return name
+    rid_symbol = email.split("@")[0]
+    return rid_symbol
 
 
 main()
