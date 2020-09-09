@@ -1,22 +1,17 @@
 def main():
-    get_email()
-
-
-def get_email():
     emails = {}
     email = input("Email: ")
-    get_name(email)
     while email != "":
-        email = input("Email: ")
-        get_name(email)
-
+        name = get_name(email)
+        choice = input("Is your name {}? (y/n) ".format(name))
+        if choice == "y":
+            email = input("Email: ")
+        else:
+            name = input("Name: ")
 
 def get_name(email):
-    choice = input("Is your name ? (y/n) ").lower()
-    if choice == "y":
-        return email
-    else:
-        name = input("Name: ")
+    name = email
+    return name
 
 
 main()
