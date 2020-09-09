@@ -9,5 +9,7 @@ for word in text_list:
 text_list = list(word_count_dict.keys())
 text_list.sort()
 
+length = max((len(word) for word in text_list))
 for word in text_list:
-    print("{} : {}".format(word, word_count_dict[word]))
+    print("{:{}} : {}".format(word, length,  word_count_dict[word]))
+
