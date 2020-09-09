@@ -4,10 +4,12 @@ def main():
     while email != "":
         name = get_name(email)
         choice = input("Is your name {}? (y/n) ".format(name))
-        if choice.lower() != "y":
+        if choice.lower() != "y" and choice != "":
             name = input("Name: ")
         emails[email] = name
         email = input("Email: ")
+    for email, name in emails.items():
+        print("{} ({})".format(name, email))
 
 
 def get_name(email):
