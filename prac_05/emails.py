@@ -11,8 +11,10 @@ def main():
 
 
 def get_name(email):
-    rid_symbol = email.split("@")[0]
-    return rid_symbol
+    rid_symbol = email.split('@')[0]
+    name_parts = rid_symbol.split('.')
+    name = " ".join(name_parts).title()
+    return name
 
 
 main()
