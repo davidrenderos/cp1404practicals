@@ -11,5 +11,8 @@ def main():
     print(python)
     print(visual_basic)
 
+    programs = [ruby, python, visual_basic]
+    for program in programs:
+        print(program)
 
 main()
