@@ -1,4 +1,4 @@
-from prac_06.guitars import Guitar
+from prac_06.guitar import Guitar
 CURRENT_YEAR = 2020
 VINTAGE_AGE = 50
 
@@ -13,7 +13,8 @@ def main():
     another_current_age = CURRENT_YEAR - another_guitar.year
 
     print("{} get_age() - Expected {}. Got {}".format(guitar.name, current_age, Guitar.get_age(guitar)))
-    print("{} get_age() - Expected {}. Got {}".format(another_guitar.name, another_current_age, Guitar.get_age(another_guitar)))
+    print("{} get_age() - Expected {}. Got {}".format(another_guitar.name, another_current_age,
+                                                      Guitar.get_age(another_guitar)))
     print("{} is_vintage() - Expected {}. Got {}".format(guitar.name, True, Guitar.is_vintage(guitar)))
     print("{} is_vintage() - Expected {}. Got {}".format(guitar.name, False, Guitar.is_vintage(another_guitar)))
 
