@@ -12,7 +12,10 @@ def main():
     print(visual_basic)
 
     programs = [ruby, python, visual_basic]
+    print("The dynamically typed languages are:")
     for program in programs:
-        print(program)
+        if program.is_dynamic():
+            print(program.name)
+
 
 main()
